@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace examen_app
 {
-    public partial class Form1 : Form
+    public partial class PrincipalFrm : Form
     {
-        public Form1()
+        public PrincipalFrm()
         {
             InitializeComponent();
+        }
+
+        private void btnAutores_Click(object sender, EventArgs e)
+        {
+            AutoresFrm frm = new AutoresFrm();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
